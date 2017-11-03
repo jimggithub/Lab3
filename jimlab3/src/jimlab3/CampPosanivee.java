@@ -24,7 +24,7 @@ public class CampPosanivee {
 	static String name;
 	static String age;
 	static String gender;
-	static Camper camper = null;
+//	static Camper camper = null;
 
 	/*************************************************************************
 	 * main The main method is the controlling method for Camp Posanivee.
@@ -41,6 +41,15 @@ public class CampPosanivee {
 		System.out.println("Start of the program");
 		
 		System.out.println("Another line of code");
+		
+		
+		System.out.println("Third line of code");
+		
+		System.out.println("another line");
+		
+		System.out.println("single line");
+		
+		System.out.println("5th output line");
 
 	}
 
