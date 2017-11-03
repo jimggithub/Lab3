@@ -39,6 +39,8 @@ public class CampPosanivee {
 		// logic here…
 
 		System.out.println("Start of the program");
+		
+		System.out.println("Another line of code");
 
 	}
 
