@@ -46,6 +46,8 @@ public class CampPosanivee {
 		System.out.println("Third line of code");
 		
 		System.out.println("another line");
+		
+		System.out.println("single line");
 
 	}
 
