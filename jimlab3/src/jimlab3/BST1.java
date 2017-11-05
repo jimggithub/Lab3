@@ -1,27 +1,36 @@
 package jimlab3;
 
-import lab3.Queue;
-import lab3.QueueLL;
-import lab3.BST.treenode;
+//import jimlab3.BST1.treenode;
 
-public class BST {
-	private class treenode {
-		Comparable item;
+/****************************************************************************
+ * Binary Search Tree class
+ *
+ * @author Jim Griffin
+ * @version 1.0
+ * @date 11-2-2017
+ * @course MCIS-0503 Fall 2017 Data Structures and Algorithms
+ * @instructor Dr. Jeremy Lanman
+ *****************************************************************************/
+public class BST1<T> {
+
+	private class treenode<T> {
+		Comparable<T> item;
 		treenode left, right;
 	}
 
-	treenode root;
+	public treenode root;
+	//treenode root;
 	int count;
-	private Queue Q;
+	public QueueLL Q;
 
 	public static final int PREORDER = 0;
 	public static final int INORDER = 1;
 	public static final int POSTORDER = 2;
 
-	public BST() {
+	public BST1() {
 		root = null;
 		count = 0;
-		Q = new QueueLL();
+		Q = new QueueLL<T>();
 	}
 
 	public void makeEmpty() {
@@ -129,28 +138,29 @@ public class BST {
 	}
 
 	// Iterator functions
-
 	public void reset() {
 		reset(INORDER);
 	}
+
+	// public void reser(){reset (PREORDER);}
 
 	public void reset(int order) {
 		Q.makeEmpty();
 		traverse(root, order);
 	}
 
-	private void traverse(treenode r, int order) {
+	public void traverse(treenode r, int order) {
 		if (r == null)
 			return;
 
 		if (order == PREORDER)
-			Q.enqueue(r.item);
+			Q.enqueue((Camper) r.item);
 		traverse(r.left, order);
 		if (order == INORDER)
-			Q.enqueue(r.item);
+			Q.enqueue((Camper) r.item);
 		traverse(r.right, order);
 		if (order == POSTORDER)
-			Q.enqueue(r.item);
+			Q.enqueue((Camper) r.item);
 	}
 
 	public Comparable getNext() {
@@ -176,4 +186,13 @@ public class BST {
 		print(r.right);
 	}
 
+	public String toString() {
+		reset();
+		return Q.toString();
+	}
+
+	public String toString(int order) {
+		reset(order);
+		return Q.toString();
+	}
 }

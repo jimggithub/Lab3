@@ -1,0 +1,14 @@
+E Bob 22 M
+E John 33 M
+E Patty 36 F
+L
+D John
+E Jim 35 M
+D Bob
+W John
+E Freddie 18 M 
+W Jim
+S
+P
+A
+Q

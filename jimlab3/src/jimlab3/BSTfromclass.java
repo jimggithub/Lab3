@@ -1,9 +1,3 @@
-package jimlab3;
-
-import lab3.Queue;
-import lab3.QueueLL;
-import lab3.BST.treenode;
-
 public class BST {
 	private class treenode {
 		Comparable item;
